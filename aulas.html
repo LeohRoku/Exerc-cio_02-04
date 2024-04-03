@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrica de Monstros</title>
+    <!-- CSS -->
+    <link href="css/estilo.css" rel="stylesheet" />
+    <link href="css/tabela.css" rel="stylesheet" />
+    <!-- https://divtable.com/table-styler/ -->
+</head>
+<body>
+    <header> <!-- área de cabeçalho -->
+        <nav> <!-- área de navegação -->
+            <ul><!-- unordered list - lista não ordenada -->
+                <li><a href="index.html">Início</a></li> <!-- list item - item da lista -->
+                <li><a href="clientes.html">Cliente</a></li>
+                <li><a href="#">Aulas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Aulas</h1>
+    <form action="#">
+        <label for="nomeDaAtividade">Nome da Atividade: </label>
+        <input type="text" name="nomeDaAtividade" id="nomeDaAtividade" required/>
+
+        <label for="periodo">Período:</label>
+        <select name="periodo" id="periodo" required>
+            <option value="selected">Selecione...</option>
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+
+        </select>
+
+            <label for="diaDaSemana">Dia da Semana:</label>
+            <select name="diaDaSemana" id="diaDaSemana" required>
+                <option value="selected">Selecione...</option>
+                <option value="domingo">Domingo</option>
+                <option value="segunda">Segunda</option>
+                <option value="terça">Terça</option>
+                <option value="quarta">Quarta</option>
+                <option value="quinta">Quinta</option>
+                <option value="sexta">Sexta</option>
+                <option value="sabado">Sábado</option>
+
+            </select>
+        <label for="aulaAtiva">Aula Ativa?</label>  
+        <div class="opcoes">   
+            <input type="checkbox" id="aulaAtiva" name="aulaAtiva" checked>
+            <label for=""></label>
+            
+        </div>
+        <button class="botao" type="submit" id="salvar">💾 Salvar</button>
+    </form>
+    <!-- tabela de dados -->
+    <table border="1" class="blueTable">
+        <caption>Relação de Aulas</caption>
+        <thead>
+            <th>Nome da Atividade</th>
+            <th>Perído</th>
+            <th>Dia da Semana</th>
+            <th>Aula Ativa</th>
+        </thead>
+        <tbody id="listaAulas">
+            
+        </tbody>
+    </table>
+    <!-- Carregando o JS do projeto -->     
+    <script src="js/aula.js"></script>       
+</body>  
+</html>
